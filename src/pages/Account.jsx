@@ -26,7 +26,7 @@ export default function Account() {
     <main>
       <h1>My Account</h1>
       <p>
-        Name: {user.fistname} {user.lastname}
+        Name: {user.firstname} {user.lastname}
       </p>
       <p>Email: {user.email}</p>
       <h2> My Reservations</h2>
@@ -35,7 +35,7 @@ export default function Account() {
       ) : (
         <ul>
           {user.reservations.map((reservation) => (
-            <li key={reservationId}>
+            <li key={reservation.Id}>
               <img
                 src={reservation.coverimage}
                 onError={(e) => {

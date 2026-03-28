@@ -53,7 +53,7 @@ export async function reserveBook(token, bookId) {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
-    body: json.stringify({ bookId }),
+    body: JSON.stringify({ bookId }),
   });
   const data = await response.json();
   return data;

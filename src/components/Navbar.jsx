@@ -10,18 +10,30 @@ export default function Navbar() {
   return (
     <nav>
       <h1>Book Buddy</h1>
-      <Link to="/">Books</Link>
-      {token ? (
-        <>
-          <Link to="/account">Account</Link>
-          <button onClick={handleLogout}>Logout</button>
-        </>
-      ) : (
-        <>
-          <Link to="/login">Login</Link>
-          <Link to="/register">Register</Link>
-        </>
-      )}
+      <div className="nav-links">
+        <Link to="/" className="nav-link">
+          Books
+        </Link>
+        {token ? (
+          <>
+            <Link to="/account" className="nav-link">
+              Account
+            </Link>
+            <button className="nav-link" onClick={handleLogout}>
+              Logout
+            </button>
+          </>
+        ) : (
+          <>
+            <Link to="/login" className="nav-link">
+              Login
+            </Link>
+            <Link to="/register" className="nav-link">
+              Register
+            </Link>
+          </>
+        )}
+      </div>
     </nav>
   );
 }
