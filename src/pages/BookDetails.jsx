@@ -3,7 +3,7 @@ import { useParams } from "react-router";
 import { getBookById, reserveBook } from "../api";
 import { useAuth } from "../auth/AuthContext";
 
-export default function BookDetails({ token }) {
+export default function BookDetails() {
   const [book, setBook] = useState(null);
   const { id } = useParams();
   const { token } = useAuth();
@@ -32,7 +32,7 @@ export default function BookDetails({ token }) {
         }}
         alt={book.title}
       />
-      <h1>{book.titel}</h1>
+      <h1>{book.title}</h1>
       <p>{book.author}</p>
       <p>{book.description}</p>
       {token && (

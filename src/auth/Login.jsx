@@ -3,8 +3,8 @@ import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "./AuthContext";
 
 export default function Login() {
-  const { login } = useAuth;
-  const navigate = useNavigate;
+  const { login } = useAuth();
+  const navigate = useNavigate();
   const [error, setError] = useState(null);
 
   const tryLogin = async (formData) => {

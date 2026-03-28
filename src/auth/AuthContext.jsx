@@ -19,7 +19,7 @@ export function AuthProvider({ children }) {
     setToken(result.token);
   };
   const login = async (credentials) => {
-    const response = await fetch(`${BASE_URL}/users/register`, {
+    const response = await fetch(`${BASE_URL}/users/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(credentials),
